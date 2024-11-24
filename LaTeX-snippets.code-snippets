@@ -1,0 +1,854 @@
+{
+    // ===================================================
+    // LaTeX Snippets File
+    // ===================================================
+    // Author: Alexander Lanine
+    // Date: YYYY-MM-DD
+    // Description: This file contains LaTeX snippets designed to
+    // streamline document creation in various LaTeX environments.
+    // Usage: Add this file to your editor's snippet configuration
+    // (e.g., VS Code, Sublime Text, etc.) and use the prefixes
+    // to insert LaTeX commands quickly.
+    // ===================================================
+  
+    // ===================================================
+    // FORMATTING SNIPPETS
+    // ===================================================
+
+    "enumerate": {
+        "prefix": "enum",
+        "body": [
+            "\\begin{enumerate}[${1:1.}]",
+            "\t\\item $0",
+            "\\end{enumerate}"
+        ],
+        "description": "enumerate environment"
+   },
+
+   "item": {
+    "prefix": "item",
+    "body": [
+       "\\begin{itemize}",
+       "\t\\item $0",
+       "\\end{itemize}"
+    ],
+    "description": "itemize env"
+    },
+
+    "color.blue": {
+        "prefix": "cb",
+        "body": [
+        "\\textcolor{blue}{${TM_SELECTED_TEXT:$1}} $0"
+        ],
+        "description": "Make Blue Text In LaTeX"
+    },
+
+    "color.red":{
+		"prefix": "cr",
+		"body": [
+			"\\textcolor{red}{${TM_SELECTED_TEXT:$1}} $0"
+		],
+		"description": "Make Red Text In Latex"
+	},
+
+    "bold.face": {
+        "prefix": "bf",
+        "body": [
+        "\\textbf{${TM_SELECTED_TEXT:$1}} $0"
+        ],
+        "description": "Write in boldface"
+    },
+
+    "italics": {
+        "prefix": "ti",
+        "body": [
+        "\\textit{${TM_SELECTED_TEXT:$1}} $0"
+        ],
+        "description": "Write text in italics"
+    },
+
+    "frame":{
+		"prefix": "frame",
+		"body": [
+			"\\begin{frame}[t]",
+			"\t \\frametitle{$1}",
+			"\t $0", 
+			"\\end{frame}"
+		]
+	},
+
+    "label": {
+        "prefix": "lab",
+        "body": [
+            "\\label{$1}",
+            "$0"
+        ],
+        "description": ""
+   },
+
+   "begin": {
+    "prefix": "beg",
+    "body": [
+        "\\begin{$1}",
+        "\t $0",
+        "\\end{$1}"
+    ],
+    "description": ""
+    },
+
+    "vspace": {
+        "prefix": "vs",
+        "body": [
+            "\\vspace{${1:1}em}$0",
+        ],
+        "description": ""
+   },
+
+    // ===================================================
+    // FORMATTING MATH MODE SNIPPETS
+    // ===================================================
+
+    "math.mode": {
+        "prefix": "m",
+        "body": [
+            "$$0$",
+        ],
+        "description": "Enter math mode."
+   },
+
+	"display.mode": {
+        "prefix": "d",
+        "body": [
+            "$$$0$$",
+        ],
+        "description": "Enter display mode."
+   },
+
+   "equation": {
+    "prefix": "eq",
+    "body": [
+       "\\begin{equation}",
+       "\t$0",
+       "\\end{equation}"
+    ],
+    "description": ""
+    },
+
+
+   "align.star": {
+    "prefix": "aligns",
+    "body": [
+        "\\begin{align*}",
+        "\t $0",
+        "\\end{align*}",
+    ],
+    "description": "align_math_mode"
+    },
+
+   "math.mode.selected": {
+    "prefix": "sm",
+    "body": [
+        "$${TM_SELECTED_TEXT:$1}$ $0",
+    ],
+    "description": "replace highlighted text with math mode"
+},
+
+   "math.bold.face": {
+    "prefix": "mbf",
+    "body": [
+        "\\mathbf{${TM_SELECTED_TEXT:$1}} $0",
+    ],
+    "description": "Write in bold face"
+    },
+
+    "math.cal": {
+        "prefix": "mc",
+        "body": [
+            "\\mathcal{${1:P}}$0",
+        ],
+        "description": ""
+   },
+
+   "text": {
+    "prefix": "txt",
+    "body": [
+        "\\text{${TM_SELECTED_TEXT:$1}} $0",
+    ],
+    "description": ""
+    },
+
+    // ===================================================
+    // FORMATTING WITH TIKZ AND TIKZIT
+    // ===================================================
+
+    "figure": {
+        "prefix": "tikzfig",
+        "body": [
+           "\\begin{figure}[h]",
+               "\t\\centering",
+               "\t\\tikzfig{$1}",
+               "\t\\caption{$2)",
+               "\t\\label{fig:c4chi2}",
+           "\\end{figure}",
+           "$0"
+        ],
+        "description": "place a figure made in tikzit"
+   },
+
+   "tikz.packages": {
+    "prefix": "pretikz",
+    "body": [
+       "\\usepackage{tikz}",
+       "\\usepackage{tikzit}",
+       "\\usetikzlibrary{arrows}"
+    ],
+    "description": "Add the tikz packages you like using to your preamble"
+    D},
+
+    // ===================================================
+    // ENTER THEOREM ENVIRONMENT
+    // ===================================================
+
+    // Make a definiton
+	"defintion": {
+        "prefix": "def",
+        "body": [
+            "\\begin{definition}",
+            "\t$0",
+            "\\end{definition}"
+        ],
+        "description": "Create a Definition"
+   },
+
+	// Make a question
+	"question.environment": {
+		"prefix": "ques",
+		"body": [
+			"\\begin{question}",
+			"\t$0",
+			"\\end{question}"
+		],
+		"description": "Create a question env"
+	},
+
+	// Answer environment
+	"answer": {
+		 "prefix": "ans",
+		 "body": [
+			"\\begin{answer}",
+			"\t$0",
+			"\\end{answer}"
+		 ],
+		 "description": ""
+	},
+
+	// Make a proof
+	"example": {
+		"prefix": "example",
+		"body": [
+			"\\begin{example}",
+			"\t$1",
+			"\\end{example}",
+			"$0"
+		],
+		"description": "Create a proof"
+   },	
+
+   	// Make a proposition
+	"proposition": {
+		"prefix": "prop",
+		"body": [
+			"\\begin{proposition}",
+			"\t$0",
+			"\\end{proposition}"
+		],
+		"description": "Create a prop"
+   },	
+
+   	// Make a corollary
+	"corollary": {
+		"prefix": "cor",
+		"body": [
+			"\\begin{corollary}",
+			"\t$0",
+			"\\end{corollary}"
+		],
+		"description": "Create a cor"
+   },	
+
+   	// Make a Theorem
+	"theorem": {
+        "prefix": "thm",
+        "body": [
+           "\\begin{theorem}",
+           "\t$0",
+           "\\end{theorem}"
+        ],
+        "description": "Create a Theorem"
+   },
+
+   // Make a Lemma
+   "lemma": {
+        "prefix": "lem",
+        "body": [
+           "\\begin{lemma}",
+           "\t$0",
+           "\\end{lemma}"
+        ],
+        "description": "Create a lemma"
+   },
+
+    // ===================================================
+    // SYMBOLS: LOGIC
+    // ===================================================
+
+    "for.all": {
+        "prefix": "all",
+        "body": [
+            "\\forall",
+        ],
+        "description": ""
+   },
+
+   "there.exists": {
+    "prefix": "exi",
+    "body": [
+        "\\exists",
+    ],
+    "description": ""
+   },
+
+   "models": {
+    "prefix": "mod",
+    "body": [
+        "\\models",
+    ],
+    "description": "creates turnstile symbol for semantic modelling"    
+    },
+
+    "if.then.arrow": {
+        "prefix": "ifa",
+        "body": [
+            "\\Rightarrow",
+        ],
+        "description": "if, then"
+   },
+
+   "right.arrow": {
+    "prefix": "ra",
+    "body": [
+        "\\rightarrow",
+    ],
+    "description": "draws rightarrow"
+    },
+
+    "then.if.arrow": {
+        "prefix": "fia",
+        "body": [
+            "\\Leftarrow",
+        ],
+        "description": "then, if"
+   },
+
+   "iff": {
+    "prefix": "iff",
+    "body": [
+        "\\iff",
+    ],
+    "description": "if and only iff"
+    },
+
+    "set": {
+		 "prefix": "set",
+		 "body": [
+			 "\\{$0 \\}",
+		 ],
+		 "description": "set"
+	},
+
+    "ultra.limit": {
+        "prefix": "ulim",
+        "body": [
+            "\\lim_{i,D}",
+        ],
+        "description": "ulim"
+   },
+
+    // ===================================================
+    // SYMBOLS: COMMON SYMBOLS 
+    // ===================================================
+
+   	// Make Infinity Symbol
+	"infinity": {
+        "prefix": "ooo",
+        "body": [
+            "\\infty",
+        ],
+        "description": "Make an infinity symbol"
+   },
+
+   "L.p.space": {
+    "prefix": "lp",
+    "body": [
+        "L_{${1:p}}(${2:\\mu})$0",
+    ],
+    "description": ""
+    },
+
+    // ===================================================
+    // SYMBOLS: GREEK 
+    // ===================================================
+
+
+    "alpha": {
+        "prefix": "alph",
+        "body": [
+            "\\alpha"
+        ],
+        "description": "Lowercase alpha"
+    },
+    "beta": {
+        "prefix": "bet",
+        "body": [
+            "\\beta"
+        ],
+        "description": "Lowercase beta"
+    },
+    "gamma": {
+        "prefix": "gam",
+        "body": [
+            "\\gamma"
+        ],
+        "description": "Lowercase gamma"
+    },
+    "delta": {
+        "prefix": "del",
+        "body": [
+            "\\delta"
+        ],
+        "description": "Lowercase delta"
+    },
+    "epsilon": {
+        "prefix": "eps",
+        "body": [
+            "\\epsilon"
+        ],
+        "description": "Lowercase epsilon"
+    },
+    "zeta": {
+        "prefix": "zet",
+        "body": [
+            "\\zeta"
+        ],
+        "description": "Lowercase zeta"
+    },
+    "eta": {
+        "prefix": "eta",
+        "body": [
+            "\\eta"
+        ],
+        "description": "Lowercase eta"
+    },
+    "theta": {
+        "prefix": "the",
+        "body": [
+            "\\theta"
+        ],
+        "description": "Lowercase theta"
+    },
+    "iota": {
+        "prefix": "iot",
+        "body": [
+            "\\iota"
+        ],
+        "description": "Lowercase iota"
+    },
+    "kappa": {
+        "prefix": "kap",
+        "body": [
+            "\\kappa"
+        ],
+        "description": "Lowercase kappa"
+    },
+    "lambda": {
+        "prefix": "lam",
+        "body": [
+            "\\lambda"
+        ],
+        "description": "Lowercase lambda"
+    },
+    "mu": {
+        "prefix": "mu",
+        "body": [
+            "\\mu"
+        ],
+        "description": "Lowercase mu"
+    },
+    "nu": {
+        "prefix": "nu",
+        "body": [
+            "\\nu"
+        ],
+        "description": "Lowercase nu"
+    },
+    "xi": {
+        "prefix": "xi",
+        "body": [
+            "\\xi"
+        ],
+        "description": "Lowercase xi"
+    },
+    "omicron": {
+        "prefix": "omi",
+        "body": [
+            "\\omicron"
+        ],
+        "description": "Lowercase omicron"
+    },
+    "pi": {
+        "prefix": "pi",
+        "body": [
+            "\\pi"
+        ],
+        "description": "Lowercase pi"
+    },
+    "rho": {
+        "prefix": "rho",
+        "body": [
+            "\\rho"
+        ],
+        "description": "Lowercase rho"
+    },
+    "sigma": {
+        "prefix": "sig",
+        "body": [
+            "\\sigma"
+        ],
+        "description": "Lowercase sigma"
+    },
+    "tau": {
+        "prefix": "tau",
+        "body": [
+            "\\tau"
+        ],
+        "description": "Lowercase tau"
+    },
+    "upsilon": {
+        "prefix": "ups",
+        "body": [
+            "\\upsilon"
+        ],
+        "description": "Lowercase upsilon"
+    },
+    "phi": {
+        "prefix": "phi",
+        "body": [
+            "\\phi"
+        ],
+        "description": "Lowercase phi"
+    },
+    "chi": {
+        "prefix": "chi",
+        "body": [
+            "\\chi"
+        ],
+        "description": "Lowercase chi"
+    },
+    "psi": {
+        "prefix": "psi",
+        "body": [
+            "\\psi"
+        ],
+        "description": "Lowercase psi"
+    },
+    "omega": {
+        "prefix": "ome",
+        "body": [
+            "\\omega"
+        ],
+        "description": "Lowercase omega"
+    },
+    "Gamma": {
+        "prefix": "Gam",
+        "body": [
+            "\\Gamma"
+        ],
+        "description": "Uppercase Gamma"
+    },
+    "Delta": {
+        "prefix": "Del",
+        "body": [
+            "\\Delta"
+        ],
+        "description": "Uppercase Delta"
+    },
+    "Theta": {
+        "prefix": "The",
+        "body": [
+            "\\Theta"
+        ],
+        "description": "Uppercase Theta"
+    },
+    "Lambda": {
+        "prefix": "Lam",
+        "body": [
+            "\\Lambda"
+        ],
+        "description": "Uppercase Lambda"
+    },
+    "Xi": {
+        "prefix": "Xi",
+        "body": [
+            "\\Xi"
+        ],
+        "description": "Uppercase Xi"
+    },
+    "Pi": {
+        "prefix": "Pi",
+        "body": [
+            "\\Pi"
+        ],
+        "description": "Uppercase Pi"
+    },
+    "Sigma": {
+        "prefix": "Sig",
+        "body": [
+            "\\Sigma"
+        ],
+        "description": "Uppercase Sigma"
+    },
+    "Upsilon": {
+        "prefix": "Ups",
+        "body": [
+            "\\Upsilon"
+        ],
+        "description": "Uppercase Upsilon"
+    },
+    "Phi": {
+        "prefix": "Phi",
+        "body": [
+            "\\Phi"
+        ],
+        "description": "Uppercase Phi"
+    },
+    "Psi": {
+        "prefix": "Psi",
+        "body": [
+            "\\Psi"
+        ],
+        "description": "Uppercase Psi"
+    },
+    "Omega": {
+        "prefix": "Ome",
+        "body": [
+            "\\Omega"
+        ],
+        "description": "Uppercase Omega"
+    },
+    
+    // ===================================================
+    // SYMBOLS: FUNCTIONS, NORMS
+    // ===================================================
+
+	"funtion.x.y": {
+        "prefix": "fun",
+        "body": [
+            "${1:f}: ${2:X} \\rightarrow ${3:[0,\\infty]}",
+        ],
+        "description": "Function f: X -> Y"
+   },
+
+   "ceiling": {
+    "prefix": "ceil",
+    "body": [
+        "\\left\\lceil ${TM_SELECTED_TEXT:$1} \\right\\rceil $0",
+    ],
+    "description": ""
+    },
+
+    "norm": {
+        "prefix": "norm",
+        "body": [
+            "\\left\\|$1\\right\\|_{${2:p}}$0",
+        ],
+        "description": "take a norm!"
+   },
+
+   "angle_brak": {
+    "prefix": "brangle",
+    "body": [
+        "\\langle $1\\rangle",
+    ],
+    "description": "angle brackets"
+    },
+
+    "slice": {
+        "prefix": "slice",
+        "body": [
+            "\\left[${1:E}\\right]_{${2:x}}^{${3:y}}$0",
+        ],
+        "description": "This is common notation from my measure theory class, may become obsolete"
+   },
+
+   "distance": {
+    "prefix": "dist",
+    "body": [
+        "d(${1:x},${2:y})$0",
+    ],
+    "description": ""
+    },
+
+    "L.p.space": {
+        "prefix": "lp",
+        "body": [
+            "L_{${1:p}}(${2:\\mu})$0",
+        ],
+        "description": ""
+   },
+
+   "fraction": {
+    "prefix": "fr",
+    "body": [
+        "\\frac{$1}{$2}",
+    ],
+    "description": "create a fraction"
+    },
+
+
+
+    // ===================================================
+    // SYMBOLS: SUMS, LIMITS, INTEGRALS, PRODUCTS, UNIONS, ETC 
+    // ===================================================
+
+    "limit": {
+        "prefix": "lim",
+        "body": [
+            "\\lim_{${1:n}\\rightarrow ${2:\\infty}}",
+        ],
+        "description": "limit as n goes to infinity"
+   },
+
+   "sequence": {
+    "prefix": "seq",
+    "body": [
+        "(${1:x_n})_{${2: n \\in \\N}}$0",
+    ],
+    "description": "make a sequence"
+    },
+
+    "integral": {
+        "prefix": "int",
+        "body": [
+            "\\int_{$1}^{$2}${TM_SELECTED_TEXT:$3}d${4:x}$0",
+        ],
+        "description": "take an integral"
+   },
+
+   "big.sum": {
+    "prefix": "sum",
+    "body": [
+        "\\sum_{${1:n}=${2:1}}^{${3:\\infty}}"
+    ],
+    "description": "Create Arbitrary Sums"
+    },
+
+    "in.sum": {
+		"prefix": "sumin",
+		"body": [
+			"\\sum_{${1:x} \\in ${2:X}}"
+		],
+		"description": "Create a sum over sets"
+	},
+
+    "big.union": {
+        "prefix": "cup",
+        "body": [
+            "\\bigcup_{${1:n}=${2:1}}^{${3:\\infty}}"
+        ],
+        "description": "Union over indexed sets"
+   },
+
+   "u.prod": {
+    "prefix": "uprod",
+    "body": [
+        "\\left( \\prod_{i \\in I} ${1:M_i} \\right)_D",
+    ],
+    "description": "ultra product"
+    },
+
+    "in.union": {
+		"prefix": "cupin",
+		"body": [
+			"\\bigcup_{${1:x} \\in ${2:X}}"
+		],
+		"description": "Union over a set of objects"
+	},
+
+    "big.intersection": {
+		"prefix": "cap",
+		"body": [
+			"\\bigcap_{${1:n}=${2:1}}^{${3:\\infty}}"
+		],
+		"description": "Intersect over indexed sets"
+	},
+
+    "in.intersection": {
+		"prefix": "capin",
+		"body": [
+			"\\bigcap_{${1:x} \\in ${2:X}}"
+		],
+		"description": "Intersection over a set of objects"
+	},
+
+
+    // ===================================================
+    // SYMBOLS: GRAPH THEORY
+    // ===================================================
+
+    "oriented.chi": {
+        "prefix": "chio",
+        "body": [
+            "\\chi_o(${1:D})$0",
+        ],
+        "description": "symbol for oriented chromatic number, can probably delete after math 492"
+   },
+
+   "IPQ": {
+    "prefix": "ipq",
+    "body": [
+        "I(${1:p},${2:q})",
+    ],
+    "description": "interlaced graph, from a 492 lecture, probably can delete in the future"
+    },
+
+    "knes": {
+        "prefix": "knes",
+        "body": [
+            "K(${1:n},${2:k})",
+        ],
+        "description": ""
+    },
+
+	"k.n": {
+        "prefix": "kn",
+        "body": [
+            "K_n",
+        ],
+        "description": "symbol for k_n"
+   },
+
+    // ===================================================
+    // SYMBOLS: MATRICES
+    // ===================================================
+
+	"bmatrix": {
+        "prefix": "mat",
+        "body": [
+            "\\begin{bmatrix}",
+            "$1", 
+            "\\end{bmatrix}"
+        ],
+        "description": "matrix with brackets"
+   }
+
+}
